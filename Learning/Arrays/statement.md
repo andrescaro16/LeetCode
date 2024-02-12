@@ -42,3 +42,10 @@ Using this find out,
 
 [Solution](https://github.com/andrescaro16/LeetCode/tree/main/Learning/Arrays/Exercises/2-solution.py)
 
+
+<br />
+
+3. Create a list of all odd numbers between 1 and a max number.
+Max number is something you need to take from a user using input() function
+
+[Solution](https://github.com/andrescaro16/LeetCode/tree/main/Learning/Arrays/Exercises/3-solution.py)
