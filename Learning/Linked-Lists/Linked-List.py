@@ -90,12 +90,17 @@ class LinkedList:
         return
     
     
-    def insert_values(self, list):
+    def insert_values(self, list, beginning = False):
         if len(list) == 0:
             raise Exception("The LinkedList is empty")
         
-        for data in list:
-            self.insert_at_end(data)
+        if(beginning):
+            list.reverse()
+            for elem in list:
+                self.insert_at_beginning(elem)
+        else:
+            for elem in list:
+                self.insert_at_end(elem)
         
         return
     
@@ -111,7 +116,6 @@ class LinkedList:
         print("Value not found")
         return
         
-
 
     def remove_by_value(self, data):
         if self.get_length() == 0:
@@ -132,8 +136,7 @@ class LinkedList:
         return
 
     
-        
-        
+                
 if __name__ == '__main__':
     linkedList = LinkedList()
     print("Length:", linkedList.get_length())
