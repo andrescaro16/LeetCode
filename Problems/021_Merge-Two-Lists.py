@@ -6,7 +6,7 @@ class ListNode:
 class Solution:
     
     # Time complexity: O(n)
-    # Space complexity: O(1)
+    # Space complexity: O(n)
     def mergeTwoLists(self, list1, list2):
         mergedList = ListNode()
         current = mergedList

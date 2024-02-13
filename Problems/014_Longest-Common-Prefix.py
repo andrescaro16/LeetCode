@@ -1,3 +1,5 @@
+# Time complexity: O(n log n)
+# Space complexity: O(n)
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
         strs.sort()
@@ -9,3 +11,4 @@ class Solution:
                 break
 
         return answer
+

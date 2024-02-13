@@ -1,3 +1,5 @@
+# Time complexity: O(n)
+# Space complexity: O(n)
 class Solution:
 
     def isPalindrome(self, s: str) -> bool:

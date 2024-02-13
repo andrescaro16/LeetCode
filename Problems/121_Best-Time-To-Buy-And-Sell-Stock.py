@@ -1,3 +1,5 @@
+# Time complexity: O(n)
+# Space complexity: O(1)
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         minPrice = prices[0]
