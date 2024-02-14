@@ -1,31 +1,14 @@
-# Time complexity: O(n)
-# Space complexity: O(n)
-def isValid(s: str) -> bool:
-    stack = []
-    if(len(s) % 2 == 0):
-        for elem in s:
-            if (elem == "(" or
-                elem == "{" or
-                elem == "["):
-                stack.append(elem)
-            elif(len(stack) != 0):
-                if((elem == ")" and stack[-1] == "(") or
-                    (elem == "}" and stack[-1] == "{") or
-                    (elem == "]" and stack[-1] == "[")):
-                    stack.pop()
-                else:
-                    return False
+class Solution:
+    def isValid(self, s: str) -> bool:
+        stack = []
+        matches = {')': '(', ']': '[', '}': '{'}
+
+        for i in s:
+            if i in ['(', '[', '{']:
+                stack.append(i)
             else:
-                return False
-    else:
-        return False
-    
-    if len(stack) == 0:
-        return True
-    else:
-        return False
+                if not stack or matches[i] != stack[-1]:
+                    return False
+                stack.pop()
 
-
-
-# Test 
-print(isValid("()"))       
+        return len(stack) == 0
