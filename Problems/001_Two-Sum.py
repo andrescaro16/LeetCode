@@ -1,21 +1,29 @@
+# Time complexity: O(n)
+# Space complexity: O(n)
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        dic = {}
+
+        for i in range(len(nums)):
+            try:
+                return [i, dic[target - nums[i]]]
+            except KeyError:
+                dic[nums[i]] = i
+        
+        return []
+
+
+
 # Time complexity: O(n^2)
 # Space complexity: O(1)
-def getIndex(arr, target):
-    result = []
+# class Solution:
+#     def twoSum(self, nums: List[int], target: int) -> List[int]:
+#         for i in range(len(nums)):
+#             try:
+#                 if (nums.index(target - nums[i]) != i):
+#                     answer = [i, nums.index(target - nums[i])]
+#             except ValueError:
+#                 continue
+        
+#         return answer
 
-    for i in range(len(arr)):
-        for j in range(i + 1, len(arr)):
-            if(arr[i] + arr[j] == target):
-                result.append(i)
-                result.append(j)
-                return result
-            
-    return [-1, -1]
-
-
-
-# Tests
-arr = [2,7,11,15]
-target = 9
-
-print(getIndex(arr, target))
